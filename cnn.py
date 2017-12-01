@@ -24,8 +24,6 @@ class CNN(object):
 
         self.labels = tf.placeholder(tf.float32, [None, self.num_class])
 
-
-
         self.loss_layer(self.logits, self.labels)
         self.total_loss = tf.losses.get_total_loss()
         tf.summary.scalar('total_loss', self.total_loss)
