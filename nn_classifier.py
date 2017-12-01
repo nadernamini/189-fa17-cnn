@@ -19,14 +19,15 @@ class NN:
         for i in range(train_data.shape[0]):
             print(i)
             X = np.vstack((X, train_data[i, 2].flatten()))
-        self.train_data = {'X': X, 'y': train_data[:, 1]}
+
+        self.train_data = {'X': X, 'y': np.vstack(train_data[:, 1]).astype(np.float)}
         # print(train_data[:, 1], type(train_data[:, 1]))
         X = np.empty((0, len(val_data[0, 2].flatten())))
         for i in range(val_data.shape[0]):
             print(i)
             X = np.vstack((X, val_data[i, 2].flatten()))
 
-        self.val_data = {'X': X, 'y': val_data[:, 1]}
+        self.val_data = {'X': X, 'y': np.vstack(val_data[:, 1]).astype(np.float)}
 
         print(val_data.shape, train_data.shape)
 
@@ -38,8 +39,10 @@ class NN:
         """
         Train Nearest Neighbors model
         """
-        print(self.train_data['X'], self.train_data['y'].shape)
-        self.model.fit(self.train_data['X'], self.train_data['y'])
+        # print(self.train_data['X'], self.train_data['y'].shape)
+        X, y = self.train_data['X'], self.train_data['y']
+
+        self.model.fit(X, y)
         return self.model
 
     def get_validation_error(self):
@@ -49,6 +52,7 @@ class NN:
         """
         chc = np.random.randint(self.val_data['X'].shape[0], size=self.sample_size)
         X, y = self.val_data['X'][chc], self.val_data['y'][chc]
+
         yhat = self.model.predict(X)
         # self.model.score(self.val_data['X'][chc], self.val_data['y'][chc])
 

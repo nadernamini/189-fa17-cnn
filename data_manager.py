@@ -97,7 +97,7 @@ class DataManager(object):
         idx = self.classes.index(label)
 
         one_hot[idx] = 1.0
-
+        one_hot = one_hot.astype(np.float)
         return one_hot
 
     def load_set(self, set_name):

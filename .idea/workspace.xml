@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9a84978a-0cc0-4195-b6e4-6953f4147d76" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viz_features.py" afterPath="$PROJECT_DIR$/viz_features.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_manager.py" afterPath="$PROJECT_DIR$/data_manager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nn_classifier.py" afterPath="$PROJECT_DIR$/nn_classifier.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +30,8 @@
       <file leaf-file-name="data_manager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="104" column="40" lean-forward="false" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -53,7 +54,7 @@
       <file leaf-file-name="train_nn.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train_nn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
+            <state relative-caret-position="270">
               <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
@@ -62,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nn_classifier.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nn_classifier.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nn_classifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+            <state relative-caret-position="245">
+              <caret line="41" column="65" lean-forward="true" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -74,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viz_features.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="viz_features.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viz_features.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -101,13 +102,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data_manager.py" />
         <option value="$PROJECT_DIR$/cnn.py" />
         <option value="$PROJECT_DIR$/trainer.py" />
         <option value="$PROJECT_DIR$/train_cnn.py" />
-        <option value="$PROJECT_DIR$/nn_classifier.py" />
         <option value="$PROJECT_DIR$/train_nn.py" />
         <option value="$PROJECT_DIR$/viz_features.py" />
+        <option value="$PROJECT_DIR$/data_manager.py" />
+        <option value="$PROJECT_DIR$/nn_classifier.py" />
       </list>
     </option>
   </component>
@@ -279,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512166569250</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fixed the indexing issue in viz_features">
+      <created>1512167538416</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1512167538416</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -328,7 +336,8 @@
     <MESSAGE value="fixed the dimension error in viz_feature for image input" />
     <MESSAGE value="added print statements to nnclassifier and fixed the tensor size for labels in viz_features" />
     <MESSAGE value="changed the ordering of variables in train_nn.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the ordering of variables in train_nn.py" />
+    <MESSAGE value="fixed the indexing issue in viz_features" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed the indexing issue in viz_features" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -509,39 +518,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_cnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nn_classifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train_nn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
+        <state relative-caret-position="270">
           <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
@@ -555,6 +534,36 @@
           <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_cnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-138">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="104" column="40" lean-forward="false" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nn_classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="41" column="65" lean-forward="true" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
