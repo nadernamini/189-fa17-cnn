@@ -15,10 +15,10 @@ with open(r"solver.pickle", "rb") as input_file:
 with open(r"cnn.pickle", "rb") as input_file:
     cnn = pickle.load(input_file)
 
-with open(r"val.pickle", "wb") as input_file:
+with open(r"val.pickle", "rb") as input_file:
     val_data = pickle.load(input_file)
 
-with open(r"train.pickle", "wb") as input_file:
+with open(r"train.pickle", "rb") as input_file:
     train_data = pickle.load(input_file)
 
 
