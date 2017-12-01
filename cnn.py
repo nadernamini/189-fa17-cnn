@@ -13,6 +13,7 @@ class CNN(object):
         self.classes = classes
         self.num_class = len(self.classes)
         self.image_size = image_size
+        self.conv_layer = None
 
         self.output_size = self.num_class
         self.batch_size = 40
@@ -23,7 +24,7 @@ class CNN(object):
 
         self.labels = tf.placeholder(tf.float32, [None, self.num_class])
 
-        self.conv_layer = None
+
 
         self.loss_layer(self.logits, self.labels)
         self.total_loss = tf.losses.get_total_loss()
