@@ -31,7 +31,11 @@ plt.plot(solver.train_accuracy, label='Training')
 plt.legend()
 plt.xlabel('Iterations (in 200s)')
 plt.ylabel('Accuracy')
-plt.show()
+"""AWS"""
+out_png = '/figures/3e.png'
+plt.savefig(out_png, dpi=300)
+
+# plt.show()
 
 val_data = dm.val_data
 train_data = dm.train_data

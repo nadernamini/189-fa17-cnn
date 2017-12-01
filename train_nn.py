@@ -15,8 +15,8 @@ classes = CLASS_LABELS
 
 dm = DataManager(classes, image_size)
 
-val_data = dm.val_data
-train_data = dm.train_data
+val_data = dm.te_data
+train_data = dm.tr_data
 
 K = [1, 20, 100]
 test_losses = []
@@ -24,6 +24,7 @@ train_losses = []
 
 for k in K:
     nn = NN(val_data, train_data, n_neighbors=k)
+
 
     nn.train_model()
 
@@ -35,7 +36,10 @@ plt.plot(K, train_losses, label='Training')
 plt.legend()
 plt.xlabel('Number of Neighbors')
 plt.ylabel('Loss')
-plt.show()
+"""AWS"""
+out_png = '/figures/3e.png'
+plt.savefig(out_png, dpi=300)
 
+# plt.show()
 
 #####Plot the test error and training error###
