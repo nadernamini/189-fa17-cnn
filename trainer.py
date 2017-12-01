@@ -3,7 +3,6 @@ import datetime
 import os
 import sys
 import argparse
-from data_manager import DataManager
 
 slim = tf.contrib.slim
 

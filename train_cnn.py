@@ -1,7 +1,7 @@
 from data_manager import DataManager
 from cnn import CNN
 from trainer import Solver
-from viz_features import Viz_Feat
+import pickle
 import random
 
 import matplotlib.pyplot as plt
@@ -36,8 +36,16 @@ plt.show()
 val_data = dm.val_data
 train_data = dm.train_data
 
-sess = solver.sess
+with open(r"solver.pickle", "wb") as output_file:
+    pickle.dump(solver, output_file)
 
-cm = Viz_Feat(val_data, train_data, CLASS_LABELS, sess)
+with open(r"cnn.pickle", "wb") as output_file:
+    pickle.dump(cnn, output_file)
 
-cm.vizualize_features(cnn)
+# sess = solver.sess
+
+
+
+# cm = Viz_Feat(val_data, train_data, CLASS_LABELS, sess)
+#
+# cm.vizualize_features(cnn)
