@@ -23,7 +23,7 @@ test_losses = []
 train_losses = []
 
 for k in K:
-    nn = NN(val_data, train_data, n_neighbors=k)
+    nn = NN(train_data, val_data, n_neighbors=k)
 
     nn.train_model()
 
