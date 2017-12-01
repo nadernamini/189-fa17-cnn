@@ -1,5 +1,5 @@
 import numpy as np
-from numpy.random import choice
+from numpy.random import choice, randint
 import cv2
 
 import glob
@@ -46,9 +46,9 @@ class DataManager(object):
         Compute a training batch for the neural network 
         The batch size should be size 40
         """
-        chc = choice(self.tr_data.shape[0], size=self.batch_size)
+        chc = randint(self.tr_data.shape[0], size=self.batch_size)
 
-        return self.tr_data[chc, 2].ravel().tolist(), self.tr_data[chc, 1].ravel().tolist()
+        return self.tr_data[chc, 2].tolist(), self.tr_data[chc, 1].tolist()
 
     def get_empty_state(self):
         images = np.zeros((self.batch_size, self.image_size, self.image_size, 3))
@@ -72,9 +72,9 @@ class DataManager(object):
 
         The batch size should be size 400
         """
-        chc = choice(self.te_data.shape[0], size=self.val_batch_size)
+        chc = randint(self.te_data.shape[0], size=self.val_batch_size)
 
-        return self.te_data[chc, 2].ravel().tolist(), self.te_data[chc, 1].ravel().tolist()
+        return self.te_data[chc, 2].tolist(), self.te_data[chc, 1].tolist()
 
     def compute_features_baseline(self, image):
         """

@@ -51,5 +51,3 @@ class Solver(object):
                 feed_dict_test = {self.net.images: images, self.net.labels: labels}
                 test_loss = self.sess.run(self.net.accurracy, feed_dict=feed_dict_test)
                 self.test_accuracy.append(test_loss)
-
-

@@ -17,7 +17,10 @@ class Viz_Feat(object):
         """
         Compute the response map for the index images
         """
-
+        for i in images:
+            out = self.sess.run([net.conv_layer],
+                                feed_dict={net.images: self.val_data[i, 2], net.labels: self.val_data[i, 1]})
+            print(out)
 
     def revert_image(self, img):
         """

@@ -23,6 +23,8 @@ class CNN(object):
 
         self.labels = tf.placeholder(tf.float32, [None, self.num_class])
 
+        self.conv_layer = None
+
         self.loss_layer(self.logits, self.labels)
         self.total_loss = tf.losses.get_total_loss()
         tf.summary.scalar('total_loss', self.total_loss)
@@ -41,7 +43,7 @@ class CNN(object):
                 Then it should return net
                 '''
                 net = slim.conv2d(images, 5, [15, 15], scope='conv_1')
-
+                self.conv_layer = net
                 net = slim.max_pool2d(net, [3, 3], scope='pool')
                 net = slim.flatten(net, scope='flat_1')
                 net = slim.fully_connected(net, 512, scope='fc_2')
