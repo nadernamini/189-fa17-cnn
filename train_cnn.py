@@ -34,7 +34,7 @@ plt.legend()
 plt.xlabel('Iterations (in 200s)')
 plt.ylabel('Accuracy')
 """AWS"""
-out_png = 'figures/3e.png'
+out_png = 'figures/3c.png'
 plt.savefig(out_png, dpi=300)
 
 # plt.show()
