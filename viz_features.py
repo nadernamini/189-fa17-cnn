@@ -20,7 +20,10 @@ class Viz_Feat(object):
         for i in images:
             out = self.sess.run([net.conv_layer],
                                 feed_dict={net.images: self.val_data[i, 2], net.labels: self.val_data[i, 1]})
-            print(out)
+            for j in range(5):
+                img = self.revert_image(out[:, :, j])
+                plt.title('img-' + str(i) + '-filter-' + str(j+1))
+                plt.imsave('figures/img-' + str(i) + '-filter-' + str(j+1) + '.png', img)
 
     def revert_image(self, img):
         """
