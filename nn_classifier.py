@@ -45,13 +45,13 @@ class NN:
         Compute validation error. Please only compute the error on the sample_size number
         over randomly selected data points. To save computation.
         """
-        chc = np.random.randint(self.val_data.shape[0], size=self.sample_size)
-        self.model.score()
+        chc = np.random.randint(self.val_data['X'].shape[0], size=self.sample_size)
+        return self.model.score(self.val_data['X'][chc], self.val_data['y'][chc])
 
     def get_train_error(self):
         """
         Compute train error. Please only compute the error on the sample_size number
         over randomly selected data points. To save computation.
         """
-        chc = np.random.randint(self.train_data.shape[0], size=self.sample_size)
-
+        chc = np.random.randint(self.train_data['X'].shape[0], size=self.sample_size)
+        return self.model.score(self.train_data['X'][chc], self.train_data['y'][chc])
