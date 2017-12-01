@@ -1,12 +1,25 @@
 import pickle
 from viz_features import Viz_Feat
-from train_cnn import val_data, train_data, CLASS_LABELS
+
+
+CLASS_LABELS = ['apple', 'banana', 'nectarine', 'plum', 'peach', 'watermelon', 'pear', 'mango', 'grape', 'orange',
+                'strawberry', 'pineapple',
+                'radish', 'carrot', 'potato', 'tomato', 'bellpepper', 'broccoli', 'cabbage', 'cauliflower', 'celery',
+                'eggplant', 'garlic', 'spinach', 'ginger']
+
+LITTLE_CLASS_LABELS = ['apple', 'banana', 'eggplant']
 
 with open(r"solver.pickle", "rb") as input_file:
     solver = pickle.load(input_file)
 
 with open(r"cnn.pickle", "rb") as input_file:
     cnn = pickle.load(input_file)
+
+with open(r"val.pickle", "wb") as input_file:
+    val_data = pickle.load(input_file)
+
+with open(r"train.pickle", "wb") as input_file:
+    train_data = pickle.load(input_file)
 
 
 sess = solver.sess

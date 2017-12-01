@@ -46,6 +46,12 @@ with open(r"solver.pickle", "wb") as output_file:
 with open(r"cnn.pickle", "wb") as output_file:
     pickle.dump(cnn, output_file)
 
+with open(r"val.pickle", "wb") as output_file:
+    pickle.dump(val_data, output_file)
+
+with open(r"train.pickle", "wb") as output_file:
+    pickle.dump(train_data, output_file)
+
 # sess = solver.sess
 
 
