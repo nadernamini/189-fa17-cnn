@@ -54,8 +54,6 @@ with open(r"pk/train.pickle", "wb") as output_file:
 
 # sess = solver.sess
 
-
-
 # cm = Viz_Feat(val_data, train_data, CLASS_LABELS, sess)
 #
 # cm.vizualize_features(cnn)
