@@ -17,11 +17,13 @@ class NN:
         X = np.empty((0, len(train_data[0, 2].flatten())))
 
         for i in range(train_data.shape[0]):
+            print(i)
             X = np.vstack((X, train_data[i, 2].flatten()))
         self.train_data = {'X': X, 'y': train_data[:, 1]}
-
+        # print(train_data[:, 1], type(train_data[:, 1]))
         X = np.empty((0, len(val_data[0, 2].flatten())))
         for i in range(val_data.shape[0]):
+            print(i)
             X = np.vstack((X, val_data[i, 2].flatten()))
 
         self.val_data = {'X': X, 'y': val_data[:, 1]}

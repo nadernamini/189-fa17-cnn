@@ -20,7 +20,7 @@ class Viz_Feat(object):
         for i in images:
             out = self.sess.run([net.conv_layer],
                                 feed_dict={net.images: self.val_data[i, 2].reshape((1, 90, 90, 3)),
-                                           net.labels: self.val_data[i, 1]})
+                                           net.labels: self.val_data[i, 1].reshape((1, 25))})
             for j in range(5):
                 img = self.revert_image(out[:, :, j])
                 plt.title('img-' + str(i) + '-filter-' + str(j+1))
