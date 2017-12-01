@@ -39,8 +39,8 @@ plt.savefig(out_png, dpi=300)
 
 # plt.show()
 
-val_data = dm.val_data
-train_data = dm.train_data
+val_data = dm.te_data
+train_data = dm.tr_data
 
 # with open(r"pk/solver.pickle", "wb") as output_file:
 #     pickle.dump(solver, output_file)
