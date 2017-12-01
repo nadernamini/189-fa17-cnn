@@ -3,6 +3,8 @@ from cnn import CNN
 from trainer import Solver
 import pickle
 import random
+from viz_features import Viz_Feat
+
 
 import matplotlib.pyplot as plt
 
@@ -40,20 +42,20 @@ plt.savefig(out_png, dpi=300)
 val_data = dm.val_data
 train_data = dm.train_data
 
-with open(r"pk/solver.pickle", "wb") as output_file:
-    pickle.dump(solver, output_file)
-
-with open(r"pk/cnn.pickle", "wb") as output_file:
-    pickle.dump(cnn, output_file)
-
-with open(r"pk/val.pickle", "wb") as output_file:
-    pickle.dump(val_data, output_file)
-
-with open(r"pk/train.pickle", "wb") as output_file:
-    pickle.dump(train_data, output_file)
-
-# sess = solver.sess
-
-# cm = Viz_Feat(val_data, train_data, CLASS_LABELS, sess)
+# with open(r"pk/solver.pickle", "wb") as output_file:
+#     pickle.dump(solver, output_file)
 #
-# cm.vizualize_features(cnn)
+# with open(r"pk/cnn.pickle", "wb") as output_file:
+#     pickle.dump(cnn, output_file)
+#
+# with open(r"pk/val.pickle", "wb") as output_file:
+#     pickle.dump(val_data, output_file)
+#
+# with open(r"pk/train.pickle", "wb") as output_file:
+#     pickle.dump(train_data, output_file)
+
+sess = solver.sess
+
+cm = Viz_Feat(val_data, train_data, CLASS_LABELS, sess)
+
+cm.vizualize_features(cnn)

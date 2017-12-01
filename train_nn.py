@@ -25,7 +25,6 @@ train_losses = []
 for k in K:
     nn = NN(val_data, train_data, n_neighbors=k)
 
-
     nn.train_model()
 
     test_losses.append(nn.get_validation_error())

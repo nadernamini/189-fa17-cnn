@@ -14,8 +14,19 @@ from sklearn.neighbors import KNeighborsClassifier
 
 class NN:
     def __init__(self, train_data, val_data, n_neighbors=5):
-        self.train_data = train_data
-        self.val_data = val_data
+        X = np.empty((0, len(train_data[0, 2].flatten())))
+
+        for i in range(train_data.shape[0]):
+            X = np.vstack((X, train_data[i, 2].flatten()))
+        self.train_data = {'X': X, 'y': train_data[:, 1].reshape((train_data[:, 1].shape[0], 1))}
+
+        X = np.empty((0, len(val_data[0, 2].flatten())))
+        for i in range(val_data.shape[0]):
+            X = np.vstack((X, val_data[i, 2].flatten()))
+
+        self.val_data = {'X': X, 'y': val_data[:, 1].reshape((val_data[:, 1].shape[0], 1))}
+
+        print(val_data.shape, train_data.shape)
 
         self.sample_size = 400
 
@@ -25,15 +36,22 @@ class NN:
         """
         Train Nearest Neighbors model
         """
+        print(self.train_data['X'], self.train_data['y'].shape)
+        self.model.fit(self.train_data['X'], self.train_data['y'])
+        return self.model
 
     def get_validation_error(self):
         """
         Compute validation error. Please only compute the error on the sample_size number
         over randomly selected data points. To save computation.
         """
+        chc = np.random.randint(self.val_data.shape[0], size=self.sample_size)
+        self.model.score()
 
     def get_train_error(self):
         """
         Compute train error. Please only compute the error on the sample_size number
         over randomly selected data points. To save computation.
         """
+        chc = np.random.randint(self.train_data.shape[0], size=self.sample_size)
+
