@@ -32,7 +32,7 @@ plt.legend()
 plt.xlabel('Iterations (in 200s)')
 plt.ylabel('Accuracy')
 """AWS"""
-out_png = '/figures/3e.png'
+out_png = 'figures/3e.png'
 plt.savefig(out_png, dpi=300)
 
 # plt.show()
@@ -40,16 +40,16 @@ plt.savefig(out_png, dpi=300)
 val_data = dm.val_data
 train_data = dm.train_data
 
-with open(r"solver.pickle", "wb") as output_file:
+with open(r"pk/solver.pickle", "wb") as output_file:
     pickle.dump(solver, output_file)
 
-with open(r"cnn.pickle", "wb") as output_file:
+with open(r"pk/cnn.pickle", "wb") as output_file:
     pickle.dump(cnn, output_file)
 
-with open(r"val.pickle", "wb") as output_file:
+with open(r"pk/val.pickle", "wb") as output_file:
     pickle.dump(val_data, output_file)
 
-with open(r"train.pickle", "wb") as output_file:
+with open(r"pk/train.pickle", "wb") as output_file:
     pickle.dump(train_data, output_file)
 
 # sess = solver.sess

@@ -9,16 +9,16 @@ CLASS_LABELS = ['apple', 'banana', 'nectarine', 'plum', 'peach', 'watermelon', '
 
 LITTLE_CLASS_LABELS = ['apple', 'banana', 'eggplant']
 
-with open(r"solver.pickle", "rb") as input_file:
+with open(r"pk/solver.pickle", "rb") as input_file:
     solver = pickle.load(input_file)
 
-with open(r"cnn.pickle", "rb") as input_file:
+with open(r"pk/cnn.pickle", "rb") as input_file:
     cnn = pickle.load(input_file)
 
-with open(r"val.pickle", "rb") as input_file:
+with open(r"pk/val.pickle", "rb") as input_file:
     val_data = pickle.load(input_file)
 
-with open(r"train.pickle", "rb") as input_file:
+with open(r"pk/train.pickle", "rb") as input_file:
     train_data = pickle.load(input_file)
 
 

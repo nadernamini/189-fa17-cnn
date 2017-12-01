@@ -37,7 +37,7 @@ plt.legend()
 plt.xlabel('Number of Neighbors')
 plt.ylabel('Loss')
 """AWS"""
-out_png = '/figures/3e.png'
+out_png = 'figures/3e.png'
 plt.savefig(out_png, dpi=300)
 
 # plt.show()
