@@ -1,6 +1,7 @@
 from data_manager import DataManager
 from nn_classifier import NN
 from trainer import Solver
+import numpy as np
 
 import matplotlib.pyplot as plt
 
@@ -18,12 +19,27 @@ dm = DataManager(classes, image_size)
 val_data = dm.te_data
 train_data = dm.tr_data
 
+X = np.empty((0, len(train_data[0, 2].flatten())))
+
+for i in range(train_data.shape[0]):
+    print(i)
+    X = np.vstack((X, train_data[i, 2].flatten()))
+
+tr_data = {'X': X, 'y': np.vstack(train_data[:, 1]).astype(np.float)}
+X = np.empty((0, len(val_data[0, 2].flatten())))
+for i in range(val_data.shape[0]):
+    print(i)
+    X = np.vstack((X, val_data[i, 2].flatten()))
+
+te_data = {'X': X, 'y': np.vstack(val_data[:, 1]).astype(np.float)}
+
 K = [1, 20, 100]
 test_losses = []
 train_losses = []
 
 for k in K:
-    nn = NN(train_data, val_data, n_neighbors=k)
+    print(k)
+    nn = NN(tr_data, te_data, n_neighbors=k)
 
     nn.train_model()
 

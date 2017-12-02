@@ -14,20 +14,9 @@ from sklearn.neighbors import KNeighborsClassifier
 
 class NN:
     def __init__(self, train_data, val_data, n_neighbors=5):
-        X = np.empty((0, len(train_data[0, 2].flatten())))
+        self.train_data = train_data
 
-        for i in range(train_data.shape[0]):
-            print(i)
-            X = np.vstack((X, train_data[i, 2].flatten()))
-
-        self.train_data = {'X': X, 'y': np.vstack(train_data[:, 1]).astype(np.float)}
-        # print(train_data[:, 1], type(train_data[:, 1]))
-        X = np.empty((0, len(val_data[0, 2].flatten())))
-        for i in range(val_data.shape[0]):
-            print(i)
-            X = np.vstack((X, val_data[i, 2].flatten()))
-
-        self.val_data = {'X': X, 'y': np.vstack(val_data[:, 1]).astype(np.float)}
+        self.val_data = val_data
 
         print(val_data.shape, train_data.shape)
 
