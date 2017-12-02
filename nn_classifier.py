@@ -46,10 +46,10 @@ class NN:
         return self.calc_err(y, yhat)
 
     def calc_err(self, y, yhat):
-        err = 0
-        for i in range(self.sample_size):
-            err += np.linalg.norm(y[i] - yhat[i]) ** 2
-        return 1 - (err / (2 * self.sample_size))
+        # err = 0
+        # for i in range(self.sample_size):
+        #     err += np.linalg.norm(y[i] - yhat[i]) ** 2
+        return 1 - (np.linalg.norm(y - yhat) / (2 * self.sample_size))
 
     def get_train_error(self):
         """
