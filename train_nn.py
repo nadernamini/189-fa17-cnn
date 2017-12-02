@@ -33,7 +33,7 @@ for i in range(val_data.shape[0]):
 
 te_data = {'X': X, 'y': np.vstack(val_data[:, 1]).astype(np.float)}
 
-K = [1, 20, 100]
+K = [i for i in range(1, 101)]
 test_losses = []
 train_losses = []
 
