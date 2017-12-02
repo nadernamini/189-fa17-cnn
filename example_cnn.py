@@ -1,6 +1,4 @@
-import numpy as np
 import tensorflow as tf
-# import yolo.config_card as cfg
 
 import IPython
 

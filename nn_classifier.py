@@ -1,13 +1,4 @@
-from numpy.random import uniform
-import random
-import time
-
 import numpy as np
-import glob
-import os
-
-import matplotlib.pyplot as plt
-import sys
 
 from sklearn.neighbors import KNeighborsClassifier
 

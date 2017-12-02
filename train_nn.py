@@ -1,6 +1,5 @@
 from data_manager import DataManager
 from nn_classifier import NN
-from trainer import Solver
 import numpy as np
 
 import matplotlib.pyplot as plt

@@ -1,7 +1,6 @@
 from data_manager import DataManager
 from cnn import CNN
 from trainer import Solver
-import pickle
 import random
 from viz_features import Viz_Feat
 

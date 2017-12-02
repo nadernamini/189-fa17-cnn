@@ -1,5 +1,5 @@
 import numpy as np
-from numpy.random import choice, randint
+from numpy.random import randint
 import cv2
 
 import glob
