@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/189-fa17-cnn.iml" filepath="$PROJECT_DIR$/.idea/189-fa17-cnn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../CNN-kernels/.idea/CNN-kernels.iml" filepath="$PROJECT_DIR$/../../CNN-kernels/.idea/CNN-kernels.iml" />
     </modules>
   </component>
 </project>

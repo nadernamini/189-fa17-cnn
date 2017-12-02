@@ -1,8 +1,6 @@
 from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
-import random
 import cv2
-import IPython
 import numpy as np
 
 
@@ -125,7 +123,8 @@ class Confusion_Matrix(object):
         # Plot confusion matrix (true labels vs. predicted labels)
         plt.xticks(range(width), alphabet[:width], rotation=90)
         plt.yticks(range(height), alphabet[:height])
-        plt.show()
+        out_png = 'figures/3a.png'
+        plt.savefig(out_png, dpi=300)
         return plt
 
     def getConfusionMatrixPlot(self, true_labels, predicted_labels, alphabet):
