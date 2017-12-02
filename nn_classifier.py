@@ -18,8 +18,6 @@ class NN:
 
         self.val_data = val_data
 
-        print(val_data.shape, train_data.shape)
-
         self.sample_size = 400
 
         self.model = KNeighborsClassifier(n_neighbors=n_neighbors)
@@ -51,7 +49,7 @@ class NN:
         err = 0
         for i in range(self.sample_size):
             err += np.linalg.norm(y[i] - yhat[i]) ** 2
-        return err / self.sample_size
+        return 1 - (err / (2 * self.sample_size))
 
     def get_train_error(self):
         """
