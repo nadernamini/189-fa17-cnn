@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import cv2
 
 
 class Viz_Feat(object):
@@ -21,7 +22,7 @@ class Viz_Feat(object):
             for j in range(5):
                 img = self.revert_image(out[0][0, :, :, j])
                 plt.title('img-' + str(i) + '-filter-' + str(j+1))
-                plt.imsave('figures/img-' + str(i) + '-filter-' + str(j+1) + '.png', img)
+                cv2.imwrite('figures/img-' + str(i) + '-filter-' + str(j+1) + '.png', img)
 
     def revert_image(self, img):
         """
