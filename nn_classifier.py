@@ -40,7 +40,8 @@ class NN:
         # err = 0
         # for i in range(self.sample_size):
         #     err += np.linalg.norm(y[i] - yhat[i]) ** 2
-        return 1 - (np.linalg.norm(y - yhat) / (2 * self.sample_size))
+        return 1 - (np.linalg.norm(y - yhat) / (self.sample_size))
+
 
     def get_train_error(self):
         """
